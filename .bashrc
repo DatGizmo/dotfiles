@@ -19,9 +19,13 @@ alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
 alias boldssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias findn='find -iname'
 
-keychain --noask ~/.ssh/id_rsa
-source ~/.keychain/swe-gentoo-sh 
-source ~/.keychain/swe-gentoo-sh-gpg
+if [[ $USER == "swe" ]]; then
+	keychain --noask ~/.ssh/id_rsa
+	source ~/.keychain/swe-gentoo-sh 
+	source ~/.keychain/swe-gentoo-sh-gpg
+fi
+
+complete -o nospace -d cd
 
 #eval `keychain --eval --agents ssh,gpg id_rsa`
 
