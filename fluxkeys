@@ -1,0 +1,132 @@
+# click on the desktop to get menus
+OnDesktop Mouse1 :HideMenus
+OnDesktop Mouse2 :WorkspaceMenu
+OnDesktop Mouse3 :RootMenu
+
+# scroll on the desktop to change workspaces
+#OnDesktop Mouse4 :PrevWorkspace
+#OnDesktop Mouse5 :NextWorkspace
+OnDesktop Mouse4 :NextWindow {groups} (workspace=[current])
+OnDesktop Mouse5 :PrevWindow {groups} (workspace=[current])
+
+# scroll on the toolbar to change current window
+OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
+OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
+
+# alt + left/right click to move/resize a window
+OnWindow Mod4 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindowBorder Move1 :StartMoving
+
+OnWindow Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnLeftGrip Move1 :StartResizing bottomleft
+OnRightGrip Move1 :StartResizing bottomright
+
+# alt + middle click to lower the window
+OnWindow Mod1 Mouse2 :Lower
+
+# control-click a window's titlebar and drag to attach windows
+OnTitlebar Control Mouse1 :StartTabbing
+
+# double click on the titlebar to shade
+#OnTitlebar Double Mouse1 :Shade
+OnTitlebar Double Mouse1 :Maximize
+
+# left click on the titlebar to move the window
+OnTitlebar Mouse1 :MacroCmd {Raise} {Focus} {ActivateTab}
+OnTitlebar Move1  :StartMoving
+
+# middle click on the titlebar to lower
+OnTitlebar Mouse2 :Lower
+
+# right click on the titlebar for a menu of options
+OnTitlebar Mouse3 :WindowMenu
+
+# alt-tab
+Mod1 Tab :NextWindow {groups} (workspace=[current])
+Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
+
+# cycle through tabs in the current window
+Mod4 Tab :NextTab
+Mod4 Shift Tab :PrevTab
+
+# go to a specific tab in the current window
+Mod4 1 :Tab 1
+Mod4 2 :Tab 2
+Mod4 3 :Tab 3
+Mod4 4 :Tab 4
+Mod4 5 :Tab 5
+Mod4 6 :Tab 6
+Mod4 7 :Tab 7
+Mod4 8 :Tab 8
+Mod4 9 :Tab 9
+Mod4 0 :Tab 10
+Mod4 - :Tab 11
+Mod4 = :Tab 12
+
+# open a terminal
+#Mod1 F1 :Exec x-terminal-emulator
+
+# open a dialog to run programs
+Mod4 r :Exec fbrun -pos 10 10
+
+# volume settings, using common keycodes
+# if these don't work, use xev to find out your real keycodes
+176 :Exec amixer sset Master,0 1+
+174 :Exec amixer sset Master,0 1-
+160 :Exec amixer sset Master,0 toggle
+
+# current window commands
+l#Mod1 F4 :Close
+#Mod1 F5 :Kill
+#Mod1 F9 :Minimize
+#Mod1 F10 :Maximize
+#Mod1 F11 :Fullscreen
+
+# open the window menu
+Mod1 space :WindowMenu
+
+# exit fluxbox
+#Control Mod1 Delete :Exit
+
+# change to previous/next workspace
+Control Mod1 Left :PrevWorkspace
+Control Mod1 Right :NextWorkspace
+
+# send the current window to previous/next workspace
+#Mod4 Left :SendToPrevWorkspace
+#Mod4 Right :SendToNextWorkspace
+
+# send the current window and follow it to previous/next workspace
+#Control Mod4 Left :TakeToPrevWorkspace
+#Control Mod4 Right :TakeToNextWorkspace
+
+# change to a specific workspace
+Mod1 F1 :Workspace 1
+Mod1 F2 :Workspace 2
+Mod1 F3 :Workspace 3
+Mod1 F4 :Workspace 4
+
+Mod4 T :ToggleDecor
+
+Control Mod4 Up :Maximize
+Control Mod4 Down :Minimize
+Control Mod4 Left :SetHead 2
+Control Mod4 Right :SetHead 1
+Control Mod4 KP_1 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 LowerLeft}
+Control Mod4 KP_2 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 Bottom}
+Control Mod4 KP_3 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 LowerRight} 
+Control Mod4 KP_4 :MacroCmd {ResizeTo 50% 100%} {MoveTo 0 0 } 
+Control Mod4 KP_5 :ToggleDecor
+Control Mod4 KP_6 :MacroCmd {ResizeTo 50% 100%} {MoveTo 0 0 Right}
+Control Mod4 KP_7 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 }
+Control Mod4 KP_8 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 Top}
+Control Mod4 KP_9 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 TopRight}
+Mod4 l :ExecCommand xscreensaver-command -lock
+
+Mod4 space :ExecCommand ~/bin/playerctrl -t
+Mod4 p :ExecCommand ~/bin/playerctrl -p
+Mod4 n :ExecCommand ~/bin/playerctrl -n
+Mod4 s :ExecCommand ~/bin/playerctrl -s
+Mod4 0x2d :ExecCommand amixer sset Master 3%-
+Mod4 0x2b :ExecCommand amixer sset Master 3%+
+
