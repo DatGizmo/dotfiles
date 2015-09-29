@@ -131,3 +131,18 @@ Mod4 0x2d :ExecCommand amixer sset Master 3%-
 Mod4 0x2b :ExecCommand amixer sset Master 3%+
 
 Mod4 v :ExecCommand ~/bin/VDR
+
+179 :ExecCommand pavucontrol
+123 :ExecCommand amixer --quiet set Master 3%+
+122 :ExecCommand amixer --quiet set Master 3%-
+121 :ExecCommand amixer --quiet set Master toggle
+
+172 :ExecCommand mpc -h GizmoMpD@192.168.1.102 toggle
+173 :ExecCommand mpc -h GizmoMpD@192.168.1.102 prev
+171 :ExecCommand mpc -h GizmoMpD@192.168.1.102 next
+174 :ExecCommand mpc -h GizmoMpD@192.168.1.102 stop
+
+180 :ExecCommand VDR
+166 :PrevWorkspace
+167 :NextWorkspace
+163 :ExecCommand ario
