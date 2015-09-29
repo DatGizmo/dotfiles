@@ -130,3 +130,4 @@ Mod4 s :ExecCommand ~/bin/playerctrl -s
 Mod4 0x2d :ExecCommand amixer sset Master 3%-
 Mod4 0x2b :ExecCommand amixer sset Master 3%+
 
+Mod4 v :ExecCommand ~/bin/VDR
