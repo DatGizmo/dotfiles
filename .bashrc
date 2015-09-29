@@ -19,6 +19,14 @@ alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
 alias boldssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias findn='find -iname'
 
+if [[ $USER == "mogwai" ]]; then
+	alias mpch="mpc -h GizmoMpD@192.168.1.102"
+	export MPD_HOST=GizmoMpD@192.168.1.102
+	keychain --noask ~/.ssh/id_rsa
+	source ~/.keychain/$HOSTNAME-sh
+	source ~/.keychain/$HOSTNAME-sh-gpg
+fi
+
 if [[ $USER == "swe" ]]; then
 	keychain --noask ~/.ssh/id_rsa
 	source ~/.keychain/swe-gentoo-sh 
