@@ -15,10 +15,11 @@
 [alias]
 	co = checkout
 	cl = clone
+	cm = commit
 	st = status
 	br = branch
 	di = diff
-	dc = diff --cached
+	dic = diff --cached
 	subup = submodule foreach 'git remote update && echo'
 	subst = submodule foreach 'git status && echo'
 	subgr = !bash -c \"git submodule foreach 'git grep $1 || true && echo'\"
