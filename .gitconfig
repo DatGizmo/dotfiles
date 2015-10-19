@@ -1,0 +1,24 @@
+[user]
+	name = Sebastian Wezel
+	email = swezel@data-modul.com
+[color]
+	ui = auto
+[core]
+        pager = less -FRSX
+[push]
+	default = simple
+[diff]
+	#external = git-meld
+	tool = meld
+[rerere]
+	enabled = true
+[alias]
+	co = checkout
+	cl = clone
+	st = status
+	br = branch
+	di = diff
+	dc = diff --cached
+	subup = submodule foreach 'git remote update && echo'
+	subst = submodule foreach 'git status && echo'
+	subgr = !bash -c \"git submodule foreach 'git grep $1 || true && echo'\"
