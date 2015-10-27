@@ -72,11 +72,11 @@ Mod4 r :Exec fbrun -pos 10 10
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
 176 :Exec amixer sset Master,0 1+
-174 :Exec amixer sset Master,0 1-
+#174 :Exec amixer sset Master,0 1-
 160 :Exec amixer sset Master,0 toggle
 
 # current window commands
-l#Mod1 F4 :Close
+#Mod1 F4 :Close
 #Mod1 F5 :Kill
 #Mod1 F9 :Minimize
 #Mod1 F10 :Maximize
@@ -145,4 +145,6 @@ Mod4 v :ExecCommand ~/bin/VDR
 180 :ExecCommand VDR
 166 :PrevWorkspace
 167 :NextWorkspace
+181 :NextWindow {groups} (workspace=[current])
+225 :Maximize
 163 :ExecCommand ario
