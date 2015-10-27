@@ -15,7 +15,7 @@
 [alias]
 	co = checkout
 	cl = clone
-	cm = commit
+	cms = commit -sm
 	st = status
 	br = branch
 	di = diff
