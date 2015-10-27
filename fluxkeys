@@ -71,8 +71,8 @@ Mod4 r :Exec fbrun -pos 10 10
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
-176 :Exec amixer sset Master,0 1+
-174 :Exec amixer sset Master,0 1-
+Mod4 + :Exec amixer sset Master,0 1+
+Mod4 - :Exec amixer sset Master,0 1-
 160 :Exec amixer sset Master,0 toggle
 
 # current window commands
