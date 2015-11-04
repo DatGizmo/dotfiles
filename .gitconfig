@@ -23,3 +23,9 @@
 	subup = submodule foreach 'git remote update && echo'
 	subst = submodule foreach 'git status && echo'
 	subgr = !bash -c \"git submodule foreach 'git grep $1 || true && echo'\"
+	subgitk = !bash -c \"git submodule foreach 'gitk --all &'\"
+[tig "bind"]
+	main = H view-refs
+[tig "color"]
+	date = cyan default
+	graph-commit = cyan default
