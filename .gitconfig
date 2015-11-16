@@ -13,6 +13,7 @@
 [rerere]
 	enabled = true
 [alias]
+	a = add
 	co = checkout
 	cl = clone
 	cms = commit -sm
