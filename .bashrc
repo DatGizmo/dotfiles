@@ -14,18 +14,22 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+if [[ $TERM == xterm ]]; then
+    TERM=xterm-256color
+fi
+
 # Put your fun stuff here.
 alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
 alias pandoc='docker run -e PUID=${UID} -e PGID=${GID} -ti --rm -v ${PWD}:/source --rm silviof/docker-pandoc'
 alias boldssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias findn='find -iname'
-alias picoS0='picocom -b 115200 -f n /dev/ttyS0'
-alias picoS5='picocom -b 115200 -f n /dev/ttyS5'
-alias picoS6='picocom -b 115200 -f n /dev/ttyS6'
-alias picoUSB0='picocom -b 115200 -f n /dev/ttyUSB0'
-alias picoUSB1='picocom -b 115200 -f n /dev/ttyUSB1'
-alias picoUSB2='picocom -b 115200 -f n /dev/ttyUSB2'
-alias picoUSB3='picocom -b 115200 -f n /dev/ttyUSB3'
+alias picoS0='picocom -e p -b 115200 -f n /dev/ttyS0'
+alias picoS5='picocom -e p -b 115200 -f n /dev/ttyS5'
+alias picoS6='picocom -e p -b 115200 -f n /dev/ttyS6'
+alias picoUSB0='picocom -e p -b 115200 -f n /dev/ttyUSB0'
+alias picoUSB1='picocom -e p -b 115200 -f n /dev/ttyUSB1'
+alias picoUSB2='picocom -e p -b 115200 -f n /dev/ttyUSB2'
+alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 
 if [[ $USER == "mogwai" ]]; then
 	alias mpch="mpc -h GizmoMpD@192.168.1.102"
