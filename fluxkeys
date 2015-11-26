@@ -110,8 +110,8 @@ Mod4 T :ToggleDecor
 
 Control Mod4 Up :Maximize
 Control Mod4 Down :Minimize
-Control Mod4 Left :SetHead 2
-Control Mod4 Right :SetHead 1
+Control Mod4 Left :SendToNextHead
+Control Mod4 Right :SendToPrevHead
 Control Mod4 KP_1 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 LowerLeft}
 Control Mod4 KP_2 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 Bottom}
 Control Mod4 KP_3 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 LowerRight} 
@@ -125,6 +125,7 @@ Mod4 l :ExecCommand xscreensaver-command -lock
 
 Mod4 space :ExecCommand ~/bin/playerctrl -t
 Mod4 p :ExecCommand ~/bin/playerctrl -p
+Mod4 Shift p :ExecCommand ~/bin/playerctrl -P
 Mod4 n :ExecCommand ~/bin/playerctrl -n
 Mod4 s :ExecCommand ~/bin/playerctrl -s
 Mod4 0x2d :ExecCommand amixer sset Master 3%-
