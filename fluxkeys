@@ -107,6 +107,8 @@ Mod1 F3 :Workspace 3
 Mod1 F4 :Workspace 4
 
 Mod4 T :ToggleDecor
+Mod4 X :ExecCommand singlelayout
+Mod4 Q :ExecCommand duallayout
 
 Control Mod4 Up :Maximize
 Control Mod4 Down :Minimize
