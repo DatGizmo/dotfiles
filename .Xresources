@@ -1,0 +1,31 @@
+*VT100.colorBDMode:     true
+*VT100.colorBD:         red
+*VT100.colorULMode:     true
+*VT100.colorUL:         cyan
+
+! Background color
+URxvt*background: black
+! Font color
+URxvt*foreground: white
+
+URxvt*scrollBar:  false
+
+URxvt*scrollWithBuffer:  false
+URxvt*color0: black
+URxvt*color1: red3
+URxvt*color2: green3
+URxvt*color3: yellow3
+URxvt*color4: blue
+URxvt*color5: magenta3
+URxvt*color6: cyan3
+URxvt*color7: gray90
+URxvt*color8: grey50
+URxvt*color9: red
+URxvt*color10: green
+URxvt*color11: yellow
+URxvt*color12: rgb:5c/5c/ff
+URxvt*color13: magenta
+URxvt*color14: cyan
+URxvt*color15: white
+
+
