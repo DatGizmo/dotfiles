@@ -142,6 +142,8 @@ Mod4 v :ExecCommand ~/bin/VDR
 173 :ExecCommand mpc -h GizmoMpD@192.168.1.102 prev
 171 :ExecCommand mpc -h GizmoMpD@192.168.1.102 next
 174 :ExecCommand mpc -h GizmoMpD@192.168.1.102 stop
+164 :ExecCommand mpc -h GizmoMpD@192.168.1.102 volume +3 
+229 :ExecCommand mpc -h GizmoMpD@192.168.1.102 volume -3
 
 180 :ExecCommand VDR
 166 :PrevWorkspace
@@ -149,3 +151,7 @@ Mod4 v :ExecCommand ~/bin/VDR
 181 :NextWindow {groups} (workspace=[current])
 225 :Maximize
 163 :ExecCommand ario
+
+220 :ExecCommand singlelayout
+224 :ExecCommand duallayout
+
