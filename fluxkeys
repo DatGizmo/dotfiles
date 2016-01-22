@@ -125,13 +125,13 @@ Control Mod4 KP_8 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 Top}
 Control Mod4 KP_9 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 TopRight}
 Mod4 l :ExecCommand xscreensaver-command -lock
 
-Mod4 space :ExecCommand ~/bin/playerctrl -t
-Mod4 p :ExecCommand ~/bin/playerctrl -p
-Mod4 Shift p :ExecCommand ~/bin/playerctrl -P
-Mod4 n :ExecCommand ~/bin/playerctrl -n
-Mod4 s :ExecCommand ~/bin/playerctrl -s
-Mod4 0x2d :ExecCommand amixer sset Master 3%-
-Mod4 0x2b :ExecCommand amixer sset Master 3%+
+Control Mod4 space :ExecCommand ~/bin/playerctrl -t
+Control Mod4 p :ExecCommand ~/bin/playerctrl -p
+Control kod4 Shift p :ExecCommand ~/bin/playerctrl -P
+Control Mod4 n :ExecCommand ~/bin/playerctrl -n
+Control Mod4 s :ExecCommand ~/bin/playerctrl -s
+Control Mod4 0x2d :ExecCommand amixer sset Master 3%-
+Control Mod4 0x2b :ExecCommand amixer sset Master 3%+
 
 Mod4 v :ExecCommand ~/bin/VDR
 
