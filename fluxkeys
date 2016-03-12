@@ -140,12 +140,12 @@ Mod4 v :ExecCommand ~/bin/VDR
 122 :ExecCommand amixer --quiet set Master 3%-
 121 :ExecCommand amixer --quiet set Master toggle
 
-172 :ExecCommand mpc -h GizmoMpD@192.168.1.102 toggle
-173 :ExecCommand mpc -h GizmoMpD@192.168.1.102 prev
-171 :ExecCommand mpc -h GizmoMpD@192.168.1.102 next
-174 :ExecCommand mpc -h GizmoMpD@192.168.1.102 stop
-164 :ExecCommand mpc -h GizmoMpD@192.168.1.102 volume +3 
-229 :ExecCommand mpc -h GizmoMpD@192.168.1.102 volume -3
+172 :ExecCommand playerctrl --player mpd -t
+173 :ExecCommand playerctrl --player mpd -p
+171 :ExecCommand playerctrl --player mpd -n
+174 :ExecCommand playerctrl --player mpd -s
+164 :ExecCommand playerctrl --player mpd -i 
+229 :ExecCommand playerctrl --player mpd -d
 
 180 :ExecCommand VDR
 166 :PrevWorkspace
