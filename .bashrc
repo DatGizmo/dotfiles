@@ -19,10 +19,19 @@ if [[ $TERM == xterm ]]; then
 fi
 
 # Put your fun stuff here.
+function finder() 
+{
+    search=$1
+    path=$2
+    [ -z $path ] && path="."
+    echo Search for $search in $path
+    find $path -iname "*$search*"
+}
+
+alias findn=finder
 alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
 alias pandoc='docker run -e PUID=${UID} -e PGID=${GID} -ti --rm -v ${PWD}:/source --rm silviof/docker-pandoc'
 alias boldssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-alias findn='find -iname'
 alias picoS0='picocom -e p -b 115200 -f n /dev/ttyS0'
 alias picoS5='picocom -e p -b 115200 -f n /dev/ttyS5'
 alias picoS6='picocom -e p -b 115200 -f n /dev/ttyS6'
