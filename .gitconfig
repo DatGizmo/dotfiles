@@ -21,6 +21,7 @@
 	br = branch
 	di = diff
 	dic = diff --cached
+        restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
 	subup = submodule foreach 'git remote update && echo'
 	subst = submodule foreach 'git status && echo'
 	subgr = !bash -c \"git submodule foreach 'git grep $2 $1 || true && echo'\"
