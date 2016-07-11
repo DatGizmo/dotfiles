@@ -25,7 +25,9 @@
 	subup = submodule foreach 'git remote update && echo'
 	subst = submodule foreach 'git status && echo'
 	subgr = !bash -c \"git submodule foreach 'git grep $2 $1 || true && echo'\"
-	subgitk = !bash -c \"git submodule foreach 'gitk --all &'\"
+	subtig = submodule foreach 'git tig $name'
+	tig = "!f() { s=$1; n=\"${s##meta-}\"; tmux new-window -n $n tig --all; }; f"
+        subacm = "!f() { git add $1; git commit -sm \"updated $1\"; }; f"
 [tig "bind"]
 	main = H view-refs
 [tig "color"]
