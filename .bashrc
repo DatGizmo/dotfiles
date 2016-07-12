@@ -29,6 +29,7 @@ function finder()
 }
 
 alias findn=finder
+alias ls="ls --group-directories-first --color=auto"
 alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
 alias pandoc='docker run -e PUID=${UID} -e PGID=${GID} -ti --rm -v ${PWD}:/source --rm silviof/docker-pandoc'
 alias boldssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
