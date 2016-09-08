@@ -157,3 +157,6 @@ Mod4 v :ExecCommand ~/bin/VDR
 220 :ExecCommand singlelayout
 224 :ExecCommand duallayout
 
+Mouse10 :ExecCommand minVLC
+Mod4 e :ExecCommand minVLC
+
