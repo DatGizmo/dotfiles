@@ -71,6 +71,11 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 	fi
 fi
 
+# set options for less
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+# or the short version
+# export LESS='-F -i -J -M -R -W -x4 -X -z-4'
+
 export LESS_TERMCAP_mb=$'\E[01;31m' 
 export LESS_TERMCAP_md=$'\E[01;31m' 
 export LESS_TERMCAP_me=$'\E[0m' 
