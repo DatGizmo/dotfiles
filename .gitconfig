@@ -27,7 +27,7 @@
 	subgr = !bash -c \"git submodule foreach 'git grep $2 $1 || true && echo'\"
 	subtig = submodule foreach 'git tig $name'
 	tig = "!f() { s=$1; n=\"${s##meta-}\"; tmux new-window -n $n tig --all; }; f"
-        subacm = "!f() { git add $1; git commit -sm \"updated $1\"; }; f"
+    acm = "!f() { git add $1; git commit -sm \"updated $1\"; }; f"
 [tig "bind"]
 	main = H view-refs
 [tig "color"]
