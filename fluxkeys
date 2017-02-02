@@ -130,6 +130,8 @@ Mod4 p :ExecCommand ~/bin/playerctrl -p
 Mod4 Shift p :ExecCommand ~/bin/playerctrl -P
 Mod4 0xe4 :ExecCommand ~/bin/playerctrl -n
 Mod4 s :ExecCommand ~/bin/playerctrl -s
+Mod4 b :ExecCommand ~/bin/playerctrl --sb
+Mod4 f :ExecCommand ~/bin/playerctrl --sf
 Mod4 0xfc :ExecCommand amixer sset Master 3%-
 Mod4 0xf6 :ExecCommand amixer sset Master 3%+
 
