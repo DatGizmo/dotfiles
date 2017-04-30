@@ -89,8 +89,8 @@ Mod1 space :WindowMenu
 #Control Mod1 Delete :Exit
 
 # change to previous/next workspace
-Control Mod1 Left :PrevWorkspace
-Control Mod1 Right :NextWorkspace
+Control Mod1 Right :PrevWorkspace
+Control Mod1 Left :NextWorkspace
 
 # send the current window to previous/next workspace
 #Mod4 Left :SendToPrevWorkspace
