@@ -30,6 +30,7 @@ function finder()
 
 alias findn=finder
 alias ls="ls --group-directories-first --color=auto"
+alias ll="ls -al"
 alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
 alias pandoc='docker run -e PUID=${UID} -e PGID=${GID} -ti --rm -v ${PWD}:/source --rm silviof/docker-pandoc'
 alias boldssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
@@ -83,4 +84,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m' 
 export LESS_TERMCAP_ue=$'\E[0m' 
 export LESS_TERMCAP_us=$'\E[01;32m'
+export PATH=~/bin:$PATH
 
+PS1='\[\033k\u@\h:\w\033\\\]\[\033[01;34m\]\w \n\[\033[01;30m\]\t \[\033[01;32m\]\u@\h \[\033[01;34m\]\$\[\033[00m\] '
