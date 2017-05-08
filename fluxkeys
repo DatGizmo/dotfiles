@@ -118,8 +118,12 @@ Control Mod4 KP_1 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 LowerLeft}
 Control Mod4 KP_2 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 Bottom}
 Control Mod4 KP_3 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 LowerRight} 
 Control Mod4 KP_4 :MacroCmd {ResizeTo 50% 100%} {MoveTo 0 0 } 
+Control Mod4 Alt KP_4 :MacroCmd {ResizeTo 75% 100%} {MoveTo 0 0 }
+Control Mod4 Shift KP_4 :MacroCmd {ResizeTo 25% 100%} {MoveTo 0 0 }
 Control Mod4 KP_5 :ToggleDecor
 Control Mod4 KP_6 :MacroCmd {ResizeTo 50% 100%} {MoveTo 0 0 Right}
+Control Mod4 Alt KP_6 :MacroCmd {ResizeTo 75% 100%} {MoveTo 0 0 Right }
+Control Mod4 Shift KP_6 :MacroCmd {ResizeTo 25% 100%} {MoveTo 0 0 Right }
 Control Mod4 KP_7 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 }
 Control Mod4 KP_8 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 Top}
 Control Mod4 KP_9 :MacroCmd {ResizeTo 50% 50%} {MoveTo 0 0 TopRight}
@@ -134,6 +138,7 @@ Mod4 b :ExecCommand ~/bin/playerctrl --sb
 Mod4 f :ExecCommand ~/bin/playerctrl --sf
 Mod4 0xfc :ExecCommand amixer sset Master 3%-
 Mod4 0xf6 :ExecCommand amixer sset Master 3%+
+Mod4 o :ExecCommand ~/bin/onHeadphone
 
 Mod4 v :ExecCommand ~/bin/VDR
 
