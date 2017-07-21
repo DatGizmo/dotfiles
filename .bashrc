@@ -42,12 +42,14 @@ alias picoUSB1='picocom -e p -b 115200 -f n /dev/ttyUSB1'
 alias picoUSB2='picocom -e p -b 115200 -f n /dev/ttyUSB2'
 alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 
-if [[ $USER == "mogwai" ]]; then
-	alias mpch="mpc -h GizmoMpD@192.168.1.102"
-	export MPD_HOST=GizmoMpD@192.168.1.102
+if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ]; then
 	keychain --noask ~/.ssh/id_rsa
 	source ~/.keychain/$HOSTNAME-sh
+fi
+if [[ $USER == "mogwai" ]]; then
 	source ~/.keychain/$HOSTNAME-sh-gpg
+	alias mpch="mpc -h GizmoMpD@192.168.1.102"
+	export MPD_HOST=GizmoMpD@192.168.1.102
 fi
 
 if [[ $USER == "swe" ]]; then
