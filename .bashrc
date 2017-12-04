@@ -43,7 +43,7 @@ alias picoUSB2='picocom -e p -b 115200 -f n /dev/ttyUSB2'
 alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 alias thunderbird='LANG=de_de.UTF-8 thunderbird'
 
-if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ]; then
+if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ] || [ $USER == "swe" ]; then
 	keychain --noask ~/.ssh/id_rsa
 	source ~/.keychain/$HOSTNAME-sh
 fi
@@ -51,12 +51,6 @@ if [[ $USER == "mogwai" ]]; then
 	source ~/.keychain/$HOSTNAME-sh-gpg
 	alias mpch="mpc -h GizmoMpD@192.168.1.102"
 	export MPD_HOST=GizmoMpD@192.168.1.102
-fi
-
-if [[ $USER == "swe" ]]; then
-	keychain --noask ~/.ssh/id_rsa
-	source ~/.keychain/swe-gentoo-sh 
-	source ~/.keychain/swe-gentoo-sh-gpg
 fi
 
 complete -o nospace -d cd
