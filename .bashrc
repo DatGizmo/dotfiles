@@ -42,6 +42,7 @@ alias picoUSB1='picocom -e p -b 115200 -f n /dev/ttyUSB1'
 alias picoUSB2='picocom -e p -b 115200 -f n /dev/ttyUSB2'
 alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 alias thunderbird='LANG=de_de.UTF-8 thunderbird'
+alias tree='tree -C'
 
 if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ] || [ $USER == "swe" ]; then
 	keychain --noask ~/.ssh/id_rsa
