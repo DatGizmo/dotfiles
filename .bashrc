@@ -19,7 +19,7 @@ if [[ $TERM == xterm ]]; then
 fi
 
 # Put your fun stuff here.
-function finder() 
+function findn()
 {
     search=$1
     path=$2
@@ -28,7 +28,15 @@ function finder()
     find $path -iname "*$search*"
 }
 
-alias findn=finder
+function findx()
+{
+    search=$1
+    path=$2
+    [ -z $path ] && path="."
+    echo "Search for $search in '.' exluding source-mirror and buil*"
+    find $path -type d \( -path */source-mirror -o -path "*/buil*" \) -prune -o -iname "*$search*" -print
+}
+
 alias ls="ls --group-directories-first --color=auto"
 alias ll="ls -al"
 alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
