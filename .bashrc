@@ -53,8 +53,9 @@ alias thunderbird='LANG=de_de.UTF-8 thunderbird'
 alias tree='tree -C'
 
 if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ] || [ $USER == "swe" ]; then
-	keychain --noask ~/.ssh/id_rsa
+	eval `keychain --eval --agents gpg,ssh id_rsa`
 	source ~/.keychain/$HOSTNAME-sh
+	source ~/.keychain/$HOSTNAME-sh-gpg
 fi
 if [[ $USER == "mogwai" ]]; then
 	source ~/.keychain/$HOSTNAME-sh-gpg
@@ -64,7 +65,6 @@ fi
 
 complete -o nospace -d cd
 
-#eval `keychain --eval --agents ssh,gpg id_rsa`
 
 #keychain ~/.ssh/id_rsa
 #source ~/.keychain/swe-gentoo-sh
