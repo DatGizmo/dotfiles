@@ -52,7 +52,7 @@ alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 alias thunderbird='LANG=de_de.UTF-8 thunderbird'
 alias tree='tree -C'
 
-if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ] || [ $USER == "swe" ]; then
+if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ] || [ $USER == "build_iukram" ]; then
 	eval `keychain --eval --agents gpg,ssh id_rsa`
 	source ~/.keychain/$HOSTNAME-sh
 	source ~/.keychain/$HOSTNAME-sh-gpg
