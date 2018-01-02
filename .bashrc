@@ -34,7 +34,7 @@ function findx()
     path=$2
     [ -z $path ] && path="."
     echo "Search for $search in '.' exluding source-mirror and buil*"
-    find $path -type d \( -path */source-mirror -o -path "*/buil*" \) -prune -o -iname "*$search*" -print
+    find $path -type d \( -path "*/sourc*" -o -path "*/buil*" \) -prune -o -iname "*$search*" -print
 }
 
 alias ls="ls --group-directories-first --color=auto"
