@@ -17,9 +17,10 @@ fi
 if [[ $TERM == xterm ]]; then
     TERM=xterm-256color
 fi
+source acd_func.sh
 
 # Put your fun stuff here.
-function finder() 
+function findn()
 {
     search=$1
     path=$2
@@ -28,7 +29,15 @@ function finder()
     find $path -iname "*$search*"
 }
 
-alias findn=finder
+function findx()
+{
+    search=$1
+    path=$2
+    [ -z $path ] && path="."
+    echo "Search for $search in '.' exluding source-mirror and buil*"
+    find $path -type d \( -path "*/sourc*" -o -path "*/buil*" \) -prune -o -iname "*$search*" -print
+}
+
 alias ls="ls --group-directories-first --color=auto"
 alias ll="ls -al"
 alias docker-emb="docker -H tcp://emb.data-modul.com:2375"
@@ -42,11 +51,12 @@ alias picoUSB1='picocom -e p -b 115200 -f n /dev/ttyUSB1'
 alias picoUSB2='picocom -e p -b 115200 -f n /dev/ttyUSB2'
 alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 alias thunderbird='LANG=de_de.UTF-8 thunderbird'
+alias tree='tree -C'
 
-if [ $USER == "mogwai" ] || [ $USER == "archgizmo" ] || [ $USER == "swe" ]; then
-	keychain --noask ~/.ssh/id_rsa
-	source ~/.keychain/$HOSTNAME-sh
-fi
+keychain --noask --agents gpg,ssh id_rsa
+source ~/.keychain/$HOSTNAME-sh
+source ~/.keychain/$HOSTNAME-sh-gpg
+
 if [[ $USER == "mogwai" ]]; then
 	source ~/.keychain/$HOSTNAME-sh-gpg
 	alias mpch="mpc -h GizmoMpD@192.168.1.102"
@@ -55,7 +65,6 @@ fi
 
 complete -o nospace -d cd
 
-#eval `keychain --eval --agents ssh,gpg id_rsa`
 
 #keychain ~/.ssh/id_rsa
 #source ~/.keychain/swe-gentoo-sh

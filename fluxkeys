@@ -82,6 +82,7 @@ Control Mod1 Right :NextWorkspace
 Mod4 T :ToggleDecor
 Mod4 X :ExecCommand singlelayout
 Mod4 Q :ExecCommand duallayout
+Mod4 L :ExecCommand xscreensaver-command -lock
 
 Mod4 Up :Maximize
 Mod4 Down :Minimize
