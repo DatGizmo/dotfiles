@@ -1,6 +1,7 @@
 [user]
 	name = Sebastian Wezel
 	email = Sebastian.Wezel@harman.com
+	signingkey = 7A63D1A1
 [color]
 	ui = auto
 [core]
@@ -17,7 +18,7 @@
 	a = add
 	co = checkout
 	cl = clone
-	cms = commit -sm
+	cms = commit -S -sm
 	st = status
 	br = branch
 	di = diff
