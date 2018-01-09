@@ -18,6 +18,7 @@
 	a = add
 	co = checkout
 	cl = clone
+	cm = commit -sm
 	cms = commit -S -sm
 	st = status
 	br = branch
