@@ -22,20 +22,31 @@ source acd_func.sh
 # Put your fun stuff here.
 function findn()
 {
-    search=$1
-    path=$2
-    [ -z $path ] && path="."
-    echo Search for $search in $path
-    find $path -iname "*$search*"
-}
+	param=""
+	exclude=""
+	local OPTIND opt L
+	while getopts ":Lx" opt; do
+		case $opt in
+			L)
+				param="$param -L "
+				;;
+			x)
+				exclude="TRUE"
+				;;
+		esac
+	done
+	shift $(($OPTIND -1))
 
-function findx()
-{
     search=$1
     path=$2
     [ -z $path ] && path="."
-    echo "Search for $search in '.' exluding source-mirror and buil*"
-    find $path -type d \( -path "*/sourc*" -o -path "*/buil*" \) -prune -o -iname "*$search*" -print
+	if [[ $exclude == "TRUE" ]]; then
+		echo "Search for $search in '.' exluding source-mirror and buil*"
+		find $param $path -type d \( -path "*/sourc*" -o -path "*/buil*" \) -prune -o -iname "*$search*" -print
+	else
+		echo Search for $search in $path with $param
+		find $param $path -iname "*$search*"
+	fi
 }
 
 alias ls="ls --group-directories-first --color=auto"
