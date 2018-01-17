@@ -63,6 +63,7 @@ alias picoUSB2='picocom -e p -b 115200 -f n /dev/ttyUSB2'
 alias picoUSB3='picocom -e p -b 115200 -f n /dev/ttyUSB3'
 alias thunderbird='LANG=de_de.UTF-8 thunderbird'
 alias tree='tree -C'
+alias cdpwd='cd $PWD'
 
 keychain --noask --agents gpg,ssh id_rsa
 source ~/.keychain/$HOSTNAME-sh
